@@ -16,10 +16,9 @@ def schedule(timeToRecallProb: Callable[[float], float], q: float, T: float, rng
   Returns a time in the future to schedule this item *or* `inf` if the item should not be
   scheduled within `T` time units.
 
-  Note that "time" here means "units from now". The smallest returned value is
-  bounded by `sqrt(q)`, which is the maximum review rate. Lowering `q` will
-  schedule low-recall items sooner, but will also schedule high-recall items
-  sooner too.
+  Note that "time" here means "units from now", and "now" means 0. The average value
+  returned by this function will be `>= sqrt(q)` (though of course the minimum value is 0
+  and the maximum finite value is `T`).
 
   Implements the Memorize algorithm from "Enhancing human learning via spaced
   repetition optimization" by Behzad Tabibian, Utkarsh Upadhyay, Abir De, Ali

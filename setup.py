@@ -2,10 +2,10 @@ from setuptools import setup
 
 setup(
     name='memorizesrs',
-    version='1.0.0',
+    version='1.0.1',
     description='The Memorize algorithm for scheduling flashcard review time',
     long_description=(
-        'The algorithm by Tabibian et al. that balances the rate of reviews with probability of forgetting'
+        'The algorithm by Tabibian et al. that balances the rate of reviews with probability of forgetting. See GitHub for details.'
     ),
     keywords=('memorize quiz review schedule spaced repetition system srs'),
     url='https://github.com/fasiha/memorize-py',
